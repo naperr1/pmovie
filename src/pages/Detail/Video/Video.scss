@@ -1,0 +1,19 @@
+@import '../../../scss/index';
+
+.video {
+    margin-bottom: 3rem;
+    padding: 0 32px;
+
+    @include mobile{
+        padding: 0 10px;
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+        h2{
+            @include mobile{
+                font-size: 1rem;
+            }
+        }
+    }
+}

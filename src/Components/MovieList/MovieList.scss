@@ -1,0 +1,58 @@
+@import '../../scss/index.scss';
+
+.movie_list{
+    margin-bottom: 50px;
+    position: relative;
+    img{
+        position: relative;
+        border-radius: 15px;
+    }
+    
+    &-slider{
+        img{
+            border-radius: 10px;
+            width: 400px;
+
+            // @include tablet{
+            //     width: 250px;
+            // }
+
+            // @include mobile{
+            //     width: 150px;
+            // }
+        }
+        span{
+            font-size: 1.25rem;
+            font-weight: 600;
+
+            &:nth-child(2){
+                @include mobile {
+                        font-size: 1rem;
+                    }
+            }
+        }
+    }
+
+
+}
+.vote_average {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    display: inline-block;
+    background-color: rgba(77, 71, 149, .7);
+    padding: 0 5px;
+    border-radius: 5px;
+    @include flex(center, center);
+
+    span{
+        margin-right: 10px;
+
+        
+    }
+
+    @include mobile{
+        width: auto;
+    }
+}

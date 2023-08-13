@@ -1,0 +1,44 @@
+@import '../../scss/index';
+
+.footer{
+    position: relative;
+    width: 100%;
+    padding: 1rem 4rem;
+
+    @include mobile{
+        padding: 1rem;
+    }
+
+    &_logo{
+        @include flex(center, center);
+        margin-bottom: 2rem;
+
+        img{
+            width: 50px;
+            margin-right: 1rem;
+        }
+
+        a{
+            color: $txt-color;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+    &_content{
+        @include flex(center, space-between);
+        
+        &-menu{
+            a{
+                display: inherit;
+                padding: 0.5rem;
+                font-weight: 500;
+                color: $txt-color;
+
+                &:hover{
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../scss/index';
+
+.container{
+}
+
+.section{
+    margin-bottom: 30px;
+    padding: 0 32px;
+    @include mobile{
+        padding: 0 16px;
+    }
+    &_header{
+        @include flex(center, space-between);
+        margin-bottom: 15px;
+        margin-top: 30px;
+
+        h2{
+            @include mobile{
+                font-size: 1.25rem;
+            }
+        }
+
+    }
+}

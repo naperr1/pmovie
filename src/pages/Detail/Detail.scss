@@ -1,0 +1,101 @@
+@import '../../scss/index.scss';
+
+.details{
+    height: 900px;
+    margin-bottom: 75px;
+}
+
+.detail {
+    height: 50vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0));
+    }
+    
+    &_content{
+        @include flex(unset, center);
+        position: relative;
+        z-index: 9;
+        padding-top: 200px;
+        width: 80%;
+        margin: 0 auto;
+
+        @include tablet{
+            width: 95%;
+        }
+
+        @include mobile{
+            display: block;
+        }
+
+        &-poster{
+            width: 30%;
+            width: 400px;
+            height: 600px;
+            position: relative;
+            img{
+                border-radius: 20px;
+            }
+
+            @include mobile{
+                display: none;
+            }
+        }
+
+        &-text{
+            width: 70%;
+            margin-left: 20px;
+
+            @include mobile{
+                width: 100%;
+                margin-left: 0;
+            }
+
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .genres{
+                &_item{
+                    width: auto;
+                    padding: 5px;
+                    border: 2px solid;
+                    display: inline-block;
+                    border-radius: 20px;
+                    font-size: .9rem;
+                    text-align: center;
+                    margin-right: 20px;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                }
+            }
+
+            span{
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

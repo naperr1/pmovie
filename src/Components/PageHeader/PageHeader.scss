@@ -1,0 +1,11 @@
+.page_header{
+    height: 12rem;
+    position: relative;
+
+    h2{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
